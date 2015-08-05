@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="shortcut icon" href="http://images.clipartpanda.com/bug-20clip-20art-9cpeM9zcE.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	
     <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='style.css'/>
   <style>
@@ -227,16 +230,23 @@ Tokyo<br>
 </div>
 
 <div id="Script">
-<h1>London</h1>
-<p>
-London is the capital city of England. It is the most populous city in the United Kingdom,
-with a metropolitan area of over 13 million inhabitants.
-</p>
-<p>
-Standing on the River Thames, London has been a major settlement for two millennia,
-its history going back to its founding by the Romans, who named it Londinium.
-</p>
-</div>
+<h3>Type the Correct Code here!</h3>
+
+Code:<br>
+<textarea id="myTextarea">
+TYPE CODE HERE</textarea>
+
+<p>Click the button to get the content of the text area.</p>
+
+<button type="button" onclick="myFunction()">Debug!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTextarea").value;
+    document.getElementById("demo").innerHTML = x;
+}
 
 <div id="footer">
 &copy; Property of Girls Who Code Students Belviane, Claire, Julianne, and Samantha
