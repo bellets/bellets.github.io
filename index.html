@@ -4,6 +4,8 @@
   <link rel="shortcut icon" href="http://images.clipartpanda.com/bug-20clip-20art-9cpeM9zcE.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">	
   	
+	<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Metallic_shield_bug444.jpg"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='style.css'/>
@@ -13,35 +15,29 @@
 	padding: 0;
 	}
 	
-
 	.container {
 	max-width: 940px;
 	margin: 0 auto;
 	padding: 0 10px;
 	}
-
 	.jumbotron {
 	height: 800px;
 	}
-
 	.nav {
 	margin: 0;
 	padding: 20px 0;
 	}
-
 	.nav li {
 	color: #fff;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
 	font-size: 12px;
 	}
-
 	.main {
 	position: relative;
 	top: 180px;
 	text-align: center;
 	}
-
 	.btn-main {
 	background-color: #333;
 	color: #fff;
@@ -53,29 +49,24 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	}
-
 	.supporting {
 	padding-top: 80px;
 	padding-bottom: 100px;
 	}
-
 	.supporting .col {
 	float: left;
 	width: 33%;
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
 	}
-
 	.supporting img {
 	height: 32px;
 	}
-
 	.supporting h2 {
 	font-weight: 600;
 	font-size: 23px;
 	text-transform: uppercase;
 	}
-
 	.supporting p {
 	font-weight: 400;
 	font-size: 14px;
@@ -83,29 +74,24 @@
 	padding: 0 50px;
 	margin-bottom: 40px;
 	}
-
 	.clearfix {
 	clear: both;
 	}
-
 	.footer {
 	background-color: #333;
 	color: #fff;
 	padding: 30px 0;
 	}
-
 	.footer p {
 	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
 	font-size: 11px;
 	}
-
 	@media (max-width: 500px) {
 		.main h1 {
 			font-size: 50px;
 			padding: 0 40px;
 		}
-
 		.supporting .col {
 			width: 100%;
 		}
@@ -123,8 +109,6 @@
 	cursor: pointer;
 	border:none;
 	}
-
-
 	#submit:hover {
 	border: none;
 	background: #298B31;
@@ -149,11 +133,9 @@
 	body {
 	color: Black;
 	}
-
         h1 {
-        color: #fff;
+        color: #000;
 	}
-
 	p.ex {
 	color: rgb(0,0,0);
 	}	
@@ -189,10 +171,41 @@
 	    text-align:center;
 	    padding:5px; 
 	}
+	.tooltip-wrap {
+			  position: relative;
+		}
+		.tooltip-wrap .tooltip-content {
+			  display: none;
+			  position: absolute;
+			  bottom: 5%;
+			  left: 5%;
+			  right: 5%;
+			  background-color: #eeeeee;
+			  padding: .5em;
+		}
+		.tooltip-wrap:hover .tooltip-content {
+			 display: block;
+		}
+		#divtoshow {position:absolute;display:none;color:white;}
+		#onme {width:400px;height:200px;background-color:white;cursor:pointer}
+	
+	</style>
+  
+  <script type="text/javascript">
+var divName = 'divtoshow'; // div that is to follow the mouse (must be position:absolute)
+var offX = 15;          // X offset from mouse position
+var offY = 15;          // Y offset from mouse position
 
-  </style>
-  
-  
+function mouseX(evt) {if (!evt) evt = window.event; if (evt.pageX) return evt.pageX; else if (evt.clientX)return evt.clientX + (document.documentElement.scrollLeft ?  document.documentElement.scrollLeft : document.body.scrollLeft); else return 0;}
+function mouseY(evt) {if (!evt) evt = window.event; if (evt.pageY) return evt.pageY; else if (evt.clientY)return evt.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop); else return 0;}
+
+function follow(evt) {
+    var obj = document.getElementById(divName).style;
+    obj.left = (parseInt(mouseX(evt))+offX) + 'px';
+    obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
+    }
+document.onmousemove = follow;
+</script>
   </head>
   <body>
   <body background="http://payload386.cargocollective.com/1/17/574234/10027080/DSC_4282_1250.jpg">
@@ -275,26 +288,25 @@
         <h1>The Game</h1>
       </div>
     </div>
-
 <!-- Adding an image to the left of the split screen -->
-<div id="Drawing">
-<img src="http://www.clker.com/cliparts/N/Z/F/k/r/n/lightning-bug-buddy-hi.png" alt="Lightning Bug" style="width:300px;height:200px;">
-</div>
 
+<div id="Drawing">
+
+	
+<div id="divtoshow"><img src = "C:\Users\GWCUser01\Bug.png" height = '100px' width = '100px'></div>
+<br><br>
+<div id='onme' onMouseover='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="none"'>Mouse over this</div>
+
+</div>
 <div id="Script">
 <h3>Type the Correct Code here!</h3>
-
 Code:<br>
 <textarea id="myTextarea">
 TYPE CODE HERE</textarea>
-
 <!-- Adding user input functionality to the right of the split screen -->
 <p>Click the button to get the content of the text area.</p>
-
 <button type="button" onclick="myFunction()">Debug!</button>
-
 <p id="demo"></p>
-
 <script>
 function myFunction() {
     var x = document.getElementById("myTextarea").value;
@@ -302,7 +314,6 @@ function myFunction() {
 }
 </script>
 </div>
-
 	<!-- Creating the page for the instructions -->	
 	<div class="footer">
       <div class="container">
@@ -336,14 +347,10 @@ function myFunction() {
 		<p>
         This Is where the instructions go
         </p>
-
 		
-
-
 <div id="footer">
-&copy; Property of Girls Who Code Students Samantha, Belviane, Claire and Julianne
+&copy; Property of Girls Who Code Students Belviane, Claire, Julianne, and Samantha
 </div>
-
 	
   </body>
 </html>
