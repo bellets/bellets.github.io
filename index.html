@@ -301,16 +301,21 @@ document.onmousemove = follow;
 <div id="Script">
 <h3>Type the Correct Code here!</h3>
 Code:<br>
-<textarea id="myTextarea">
+<textarea id="myTextarea" style="width: 600px; height: 250px;">
 TYPE CODE HERE</textarea>
 <!-- Adding user input functionality to the right of the split screen -->
 <p>Click the button to get the content of the text area.</p>
 <button type="button" onclick="myFunction()">Debug!</button>
 <p id="demo"></p>
+<button onclick="myFunction1()">?</button>
 <script>
+function myFunction1() {
+    alert("You don't deserve a hint!<3");
+}
 function myFunction() {
     var x = document.getElementById("myTextarea").value;
-    document.getElementById("demo").innerHTML = x;
+	console.log(x);
+	document.getElementById("demo").innerHTML = x;	
 }
 </script>
 </div>
