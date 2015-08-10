@@ -138,14 +138,14 @@ font-size: 300%
 	#Drawing {
 	    background-color:#333366;
 	    height:550px;
-	    width:500px;
+	    width:300px;
 	    float:left;
 	    padding:0px; 
 	}
 	#Script {
 	background-color:#1B1B1B;
     	height:550px;
-    	width:500px;
+    	width:300px;
     	float:right;
 	padding:0px; 
 	}	
