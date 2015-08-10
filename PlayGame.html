@@ -217,10 +217,11 @@ Code:<br>
 TYPE CODE HERE</textarea></center>
 <!-- Adding user input functionality to the right of the split screen -->
 <p>Click the button to get the content of the text area.</p>
-<center><button type="button" class = "but1" onclick="myFunction()">Debug!</button>
-<p id="demo"></p>
+<center><button type="button" class = "but1" onclick="changeImage()">Debug!</button>
+
 <button class = "but2" onclick="myFunction1()">?</button></center>
 <script>
+
 function myFunction1() {
     alert("You don't deserve a hint!<3");
 }
@@ -228,6 +229,14 @@ function myFunction() {
     var x = document.getElementById("myTextarea").value;
 	console.log(x);
 	document.getElementById("demo").innerHTML = x;	
+}
+function changeImage() {
+    var image = document.getElementById('onme');
+    if (image.src.match("https://36.media.tumblr.com/fcaa2c71476a0d9399ace2db92af7405/tumblr_nsod33IQrk1rzxjy3o1_540.png") {
+        image.src = "https://lh3.googleusercontent.com/-on5LJrTOtWY/Vci0AzdrRxI/AAAAAAAADd8/Jq9Zn2OYWzc/w426-h574/firefly_light%2B%25281%2529.png";
+    } else {
+        image.src = "https://lh3.googleusercontent.com/-on5LJrTOtWY/Vci0AzdrRxI/AAAAAAAADd8/Jq9Zn2OYWzc/w426-h574/firefly_light%2B%25281%2529.png";
+    }
 }
 </script>
 </center>
