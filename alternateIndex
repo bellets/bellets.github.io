@@ -1,0 +1,543 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+	
+
+.container {
+  width: 960px;
+}
+
+
+  
+  
+  
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  
+  font-size: 17px;
+  padding: 15px;
+}
+
+
+
+.header .menu {
+  float: right;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.menu > li {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menu a {
+  color: #883eba;
+}
+
+
+
+.dropdown-menu {
+  font-size: 16px;
+  margin-top: 5px;
+  min-width: 105px;
+}
+
+.dropdown-menu li a {
+  color: #898989;
+  padding: 6px 20px;
+  font-weight: 300;
+}
+
+
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  border-bottom: 1px solid #ddd;
+}
+
+.slide {
+  background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-slide {
+    display: block;
+}
+
+.slide-copy h1 {
+  color: #363636;  
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin-top: 105px;
+  margin-bottom: 0px;
+}
+
+.slide-copy h2 {
+  color: #b7b7b7;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin: 5px;
+}
+
+.slide-copy p {
+  color: #959595;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15em;
+  line-height: 1.75em;
+  margin-bottom: 15px;
+  margin-top: 16px;
+}
+
+.slide-img {
+  text-align: right;
+}
+
+/* Slide feature */
+
+.slide-feature {
+  text-align: center;
+  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+  height: 470px;
+}
+
+.slide-feature img {
+  margin-top: 112px;
+  margin-bottom: 28px;
+}
+
+.slide-feature a {
+  display: block;
+  color: #6fc5e0;
+  
+  font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 20px;
+}
+
+.slider-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-prev {
+  margin-right: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slider-dots li {
+  color: #bbbcbc;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+  color: #363636;
+}
+
+
+.get-app {
+  list-style: none;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.get-app li {
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+	
+	
+	
+	</style>
+	<script type="text/javascript">
+(function(){function C(){e.globalCompositeOperation="source-over";e.fillStyle="rgba(8,8,12,0.65)";e.fillRect(0,0,f,p);e.globalCompositeOperation="lighter";x=q-u;y=r-v;u=q;v=r;for(var d=0.86*f,l=0.125*f,m=0.5*f,t=Math.random,n=Math.abs,o=z;o--;){var h=A[o],i=h.x,j=h.y,a=h.a,b=h.b,c=i-q,k=j-r,g=Math.sqrt(c*c+k*k)||0.001,c=c/g,k=k/g;if(w&&g<m)var s=14*(1-g/m),a=a+(c*s+0.5-t()),b=b+(k*s+0.5-t());g<d&&(s=0.0014*(1-g/d)*f,a-=c*s,b-=k*s);g<l&&(c=2.6E-4*(1-g/l)*f,a+=x*c,b+=y*c);a*=B;b*=B;c=n(a);k=n(b);g=
+0.5*(c+k);0.1>c&&(a*=3*t());0.1>k&&(b*=3*t());c=0.45*g;c=Math.max(Math.min(c,3.5),0.4);i+=a;j+=b;i>f?(i=f,a*=-1):0>i&&(i=0,a*=-1);j>p?(j=p,b*=-1):0>j&&(j=0,b*=-1);h.a=a;h.b=b;h.x=i;h.y=j;e.fillStyle=h.color;e.beginPath();e.arc(i,j,c,0,D,!0);e.closePath();e.fill()}}function E(d){d=d?d:window.event;q=d.clientX-m.offsetLeft-n.offsetLeft;r=d.clientY-m.offsetTop-n.offsetTop}function F(){w=!0;return!1}function G(){return w=!1}function H(){this.color="rgb("+Math.floor(255*Math.random())+","+Math.floor(255*
+Math.random())+","+Math.floor(255*Math.random())+")";this.b=this.a=this.x=this.y=0;this.size=1}var D=2*Math.PI,f=1E3,p=560,z=600,B=0.96,A=[],o,e,n,m,q,r,x,y,u,v,w;window.onload=function(){o=document.getElementById("mainCanvas");if(o.getContext){m=document.getElementById("outer");n=document.getElementById("canvasContainer");e=o.getContext("2d");for(var d=z;d--;){var l=new H;l.x=0.5*f;l.y=0.5*p;l.a=34*Math.cos(d)*Math.random();l.b=34*Math.sin(d)*Math.random();A[d]=l}q=u=0.5*f;r=v=0.5*p;document.onmousedown=
+F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);document.getElementById("output").innerHTML=''}else document.getElementById("output").innerHTML="Sorry, needs a recent version of Chrome, Firefox, Opera, Safari, or Internet Explorer 9."}})();    	
+</script>
+	
+	
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo-icon">
+        
+
+        <ul class="menu">
+		  <li ><a href="About.html">About</a></li>
+          <li><a href="Instructions.html">Instructions</a></li>
+          <li><a href="Story Line.html">Story Line</a></li>
+          <li><a href="Play Game.html">Play Game</a></li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Levels<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li ><a href="#">Level One</a></li>
+              <li><a href="#">Level Two</a></li>
+              <li><a href="#">Level Three</a></li>
+              <li><a href="#">Level Four</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slider">
+
+      <div class="slide active-slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1><img src = "https://41.media.tumblr.com/5a367d57e22374e25e4e528e009462f3/tumblr_nsmipj3rAW1sw58b4o1_400.png" ></h1>
+              <p>A game designed to make coding more approachable. 12+. Bugs are invited. Brought to you by Girls Who Code.</p>
+              
+              <ul class="get-app">
+                <li><a href="http://girlswhocode.com/"><img src="http://www.likeabossgirls.com/wp-content/uploads/2015/06/girlswhocodegwc-logo.png" height = '80px' width = '140px'></a></li>
+                <li><a href="https://twitter.com/girlswhocode"><img src="http://www.thenewsin.com/wp-content/uploads/2015/07/Twitter-logo.png" height = '80px' width = '80px'></a></li>
+                <li><a href="https://www.facebook.com/GirlsWhoCode"><img src="http://www.freelargeimages.com/wp-content/uploads/2014/11/Facebook_logo-2.png" height = '80px' width = '80px'></a></li>
+				
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+				<p> Click on the options below to witness how cool code is! </p>
+			<div id="outer">
+	<div id="canvasContainer">
+		<canvas id="mainCanvas" width = '200px' height = '100px'></canvas>
+		<div id="output"></div>
+	</div>
+</div>
+<style type="text/css">
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	/* Better text styling */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* Finally adding some IE9 fallbacks for gradients to finish things up */
+
+/* A nice BG gradient */
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+
+/* Using box shadows to create 3D effects */
+#calculator {
+	width: 325px;
+	height: auto;
+	
+	margin: 10px auto;
+	padding: 20px 20px 9px;
+	
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top portion */
+.top span.clear {
+	float: left;
+}
+
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 40px;
+	width: 212px;
+	
+	float: right;
+	
+	padding: 0 10px;
+	
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	/* Typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+/* Applying same to the keys */
+.keys span, .top span.clear {
+	float: left;
+	position: relative;
+	top: 0;
+	
+	cursor: pointer;
+	
+	width: 66px;
+	height: 36px;
+	
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	
+	margin: 0 7px 11px 0;
+	
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+.keys span.operator {
+	background: #FFF0F5;
+	margin-right: 0;
+}
+
+.keys span.eval {
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color: #888e5f;
+}
+
+.top span.clear {
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+/* Some hover effects */
+.keys span:hover {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
+
+.keys span.eval:hover {
+	background: #abb850;
+	box-shadow: 0px 4px #717a33;
+	color: #ffffff;
+}
+
+.top span.clear:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+.keys span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
+}
+
+.keys span.eval:active {
+	box-shadow: 0px 0px #717a33;
+	top: 4px;
+}
+
+.top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px #d3545d;
+}
+</style>
+</head>
+<body>
+<div id="calculator">
+	<!-- Screen and clear key -->
+	<div class="top">
+		<span class="clear">C</span>
+		<div class="screen"></div>
+	</div>
+	
+	<div class="keys">
+		<!-- operators and other keys -->
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span class="operator">+</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span class="operator">-</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span class="operator">Ã·</span>
+		<span>0</span>
+		<span>.</span>
+		<span class="eval">=</span>
+		<span class="operator">x</span>
+	</div>
+</div>
+
+<!-- PrefixFree -->
+<script type="text/javascript">
+// Get all the keys from document
+var keys = document.querySelectorAll('#calculator span');
+var operators = ['+', '-', 'x', 'Ã·'];
+var decimalAdded = false;
+
+// Add onclick event to all the keys and perform operations
+for(var i = 0; i < keys.length; i++) {
+	keys[i].onclick = function(e) {
+		// Get the input and button values
+		var input = document.querySelector('.screen');
+		var inputVal = input.innerHTML;
+		var btnVal = this.innerHTML;
+		
+		// Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
+		// If clear key is pressed, erase everything
+		if(btnVal == 'C') {
+			input.innerHTML = '';
+			decimalAdded = false;
+		}
+		
+		// If eval key is pressed, calculate and display the result
+		else if(btnVal == '=') {
+			var equation = inputVal;
+			var lastChar = equation[equation.length - 1];
+			
+			// Replace all instances of x and Ã· with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
+			equation = equation.replace(/x/g, '*').replace(/Ã·/g, '/');
+			
+			// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+				equation = equation.replace(/.$/, '');
+			
+			if(equation)
+				input.innerHTML = eval(equation);
+				
+			decimalAdded = false;
+		}
+		
+		// Basic functionality of the calculator is complete. But there are some problems like 
+		// 1. No two operators should be added consecutively.
+		// 2. The equation shouldn't start from an operator except minus
+		// 3. not more than 1 decimal should be there in a number
+		
+		// We'll fix these issues using some simple checks
+		
+		// indexOf works only in IE9+
+		else if(operators.indexOf(btnVal) > -1) {
+			// Operator is clicked
+			// Get the last character from the equation
+			var lastChar = inputVal[inputVal.length - 1];
+			
+			// Only add operator if input is not empty and there is no operator at the last
+			if(inputVal != '' && operators.indexOf(lastChar) == -1) 
+				input.innerHTML += btnVal;
+			
+			// Allow minus if the string is empty
+			else if(inputVal == '' && btnVal == '-') 
+				input.innerHTML += btnVal;
+			
+			// Replace the last operator (if exists) with the newly pressed operator
+			if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+				// Here, '.' matches any character while $ denotes the end of string, so anything (will be an operator in this case) at the end of string will get replaced by new operator
+				input.innerHTML = inputVal.replace(/.$/, btnVal);
+			}
+			
+			decimalAdded =false;
+		}
+		
+		// Now only the decimal problem is left. We can solve it easily using a flag 'decimalAdded' which we'll set once the decimal is added and prevent more decimals to be added once it's set. It will be reset when an operator, eval or clear key is pressed.
+		else if(btnVal == '.') {
+			if(!decimalAdded) {
+				input.innerHTML += btnVal;
+				decimalAdded = true;
+			}
+		}
+		
+		// if any other key is pressed, just append it
+		else {
+			input.innerHTML += btnVal;
+		}
+		
+		// prevent page jumps
+		e.preventDefault();
+	} 
+}
+
+</script>
+          </div>
+          </div>
+        </div> 
+		
+      </div>
+	  
+	  
+			  
+			  
+			  
+			  
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+    </div>
+\
+   
+  </body>
+</html>
+
