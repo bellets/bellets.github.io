@@ -150,6 +150,36 @@
         	text-align:center;
         	padding:5px;
 	}
+	#navigation {
+position: fixed;
+top: 0;
+width: 100%;
+color: #ffffff;
+height: 35px;
+text-align: center;
+padding-top: 15px;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+/* Adds the transparent background */
+background-color: rgba(1, 1, 1, 0.8);
+color: rgba(1, 1, 1, 0.8);
+}
+
+#navigation a {
+font-size: 14px;
+padding-left: 15px;
+padding-right: 15px;
+color: white;
+text-decoration: none;
+}
+
+#navigation a:hover {
+color: grey;
+} 
+
+Screen Shot 2012-04-22 at 16.40.27
 	#Drawing {
 	    background-color:#333366;
 	    height:550px;
@@ -190,7 +220,11 @@
 		#onme {width:600px;height:400px;background-color:white;cursor:pointer;
 		background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.jpg); 
 		}
-	
+	body {
+	padding: 0;
+	margin: 0;
+	}
+		
 	</style>
   
   <script type="text/javascript">
@@ -211,6 +245,12 @@ document.onmousemove = follow;
   </head>
   <body>
   <body background="http://payload386.cargocollective.com/1/17/574234/10027080/DSC_4282_1250.jpg">
+  	<div id="navigation">
+		<a href="#"> Home </a>
+		<a href="#"> Story Line </a>
+		<a href="#"> Start Game </a>
+		<a href="#"> Instructions </a>
+	</div>	
     <div class="header">
       <div class="container">
         <ul class="nav">
