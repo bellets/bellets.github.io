@@ -4,8 +4,6 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-	
-
 	.container {
 	  width: 960px;
 	}
@@ -108,38 +106,6 @@
 	  font-family: 'Oswald', sans-serif;
 	  font-weight: 400;
 	  font-size: 20px;
-	}
-	.slider-nav {
-	  text-align: center;
-	  margin-top: 20px;
-	}
-	.arrow-prev {
-	  margin-right: 45px;
-	  display: inline-block;
-	  vertical-align: top;
-	  margin-top: 9px;
-	}
-	.arrow-next {
-	  margin-left: 45px;
-	  display: inline-block;
-	  vertical-align: top;
-	  margin-top: 9px;
-	}
-	.slider-dots {
-	  list-style: none;
-	  display: inline-block;
-	  padding-left: 0;
-	  margin-bottom: 0;
-	}
-	.slider-dots li {
-	  color: #bbbcbc;
-	  display: inline;
-	  font-size: 30px;
-	  margin-right: 5px;
-	}
-	.slider-dots li.active-dot {
-	  color: #363636;
-	}
 	.get-app {
 	  list-style: none;
 	  padding-bottom: 30px;
@@ -156,6 +122,28 @@
 	 font-family: Arial;
 	color: white; 
 	}
+	#navigation a {
+				font-size: 14px;
+				padding-left: 15px;
+				padding-right: 15px;
+				color: white;
+				text-decoration: none;
+			}
+			#navigation a:hover {
+				color: grey;
+			} 
+			Screen Shot 2012-04-22 at 16.40.27
+			
+			#nav {
+			 min-height:66px;
+			}
+			
+			.span-logo {
+				display: inline-block;
+				position: fixed; top:1; left:0;
+				height: 118px;
+				width: 152px;
+			}
 	</style>
 	<script type="text/javascript">
 	(function(){function C(){e.globalCompositeOperation="source-over";e.fillStyle="rgba(8,8,12,0.65)";e.fillRect(0,0,f,p);e.globalCompositeOperation="lighter";x=q-u;y=r-v;u=q;v=r;for(var d=0.86*f,l=0.125*f,m=0.5*f,t=Math.random,n=Math.abs,o=z;o--;){var h=A[o],i=h.x,j=h.y,a=h.a,b=h.b,c=i-q,k=j-r,g=Math.sqrt(c*c+k*k)||0.001,c=c/g,k=k/g;if(w&&g<m)var s=14*(1-g/m),a=a+(c*s+0.5-t()),b=b+(k*s+0.5-t());g<d&&(s=0.0014*(1-g/d)*f,a-=c*s,b-=k*s);g<l&&(c=2.6E-4*(1-g/l)*f,a+=x*c,b+=y*c);a*=B;b*=B;c=n(a);k=n(b);g=
@@ -169,24 +157,17 @@
       <div class="container">
         <div class="logo-icon">
         
-        <!-- Creates the navigation bar -->
-        <ul class="menu">
-		  <li ><a href="About.html">About</a></li>
-          <li><a href="Instructions.html">Instructions</a></li>
-          <li><a href="StoryLine.html">Story Line</a></li>
-          <li><a href="PlayGame.html">Play Game</a></li>
-          
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Levels<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li ><a href="#">Level One</a></li>
-              <li><a href="#">Level Two</a></li>
-              <li><a href="#">Level Three</a></li>
-              <li><a href="#">Level Four</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+        <!-- Setting up the navigation bar-->
+		<div id="navigation">
+			<a href="index.html">
+				<span class="span-logo">
+					<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+				</span>
+			</a>
+			<a href="Instructions.html"> Instructions </a>
+			<a href="StoryLine.html"> Story Line </a>
+			<a href="PlayGame.html"> Play Game </a>
+		</div>	
     </div>
 
     <div class="slider">
