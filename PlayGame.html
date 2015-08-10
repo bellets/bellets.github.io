@@ -2,30 +2,27 @@
 <html>
 <head>
 <style>
-body {
- background-image: url("http://payload336.cargocollective.com/1/17/574234/9036394/prt_500x500_1418349368.jpg");
- font-family: Arial;
-color: white; 
-}
-
-h1 {
-font-size: 400%;
-}
-
-p{
-font-size: 300%
-
-}
-.box {border:2px solid #BDBDBD;}
-.box h2 {background:#BDBDBD;color:white;padding:10px;font-family:Arial; font-size:400%;}
-.box p {color:#333;padding:10px;color:white;font-family:Arial;font-size:300%;}
-
-
+	body {
+	 background-image: url("http://payload336.cargocollective.com/1/17/574234/9036394/prt_500x500_1418349368.jpg");
+	 font-family: Arial;
+	color: white; 
+	}
+	
+	h1 {
+	font-size: 400%;
+	}
+	
+	p{
+	font-size: 300%
+	
+	}
+	.box {border:2px solid #BDBDBD;}
+	.box h2 {background:#BDBDBD;color:white;padding:10px;font-family:Arial; font-size:400%;}
+	.box p {color:#333;padding:10px;color:white;font-family:Arial;font-size:300%;}
 	html, body {
 	margin: 0;
 	padding: 0;
 	}
-	
 	.but1 {
 	background: #FF5DB1;
 	background: -moz-linear-gradient(top,#80E380 0%,#009933 100%);
@@ -43,10 +40,7 @@ font-size: 300%
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border:1px solid #193C25
-
-	
 	}
-	
 	.but2 {
 	background: #FF5DB1;
 	background: -moz-linear-gradient(top,#CC6699 0%,#993399 100%);
@@ -64,16 +58,7 @@ font-size: 300%
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border:1px solid #660066
-
-	
 	}
-	
-	
-	
-	
-	
-	
-	
 	.clearfix {
 	clear: both;
 	}
@@ -96,7 +81,6 @@ font-size: 300%
 		width: 100%;
 		}
 	}
-	
 	h1 {
 	text-align: center;
 	}
@@ -104,17 +88,14 @@ font-size: 300%
         font-family: 'Indie Flower', serif;
 		color:white;
 	}
-		
 	p { 
 	text-align: center;
 	color:white;
 	}
-		
 	h3 {
 	font-family: 'Architects Daughter', italic;
 	color:white;
 	}
-		
 	body {
 	color: Black;
 	}
@@ -128,7 +109,6 @@ font-size: 300%
 	p {
 	font-size: 20px;
 	}
-		
 	#header {
 		background-color:black;
         	color:white;
@@ -175,7 +155,44 @@ font-size: 300%
 		#onme {width:600px;height:400px;background-color:white;cursor:pointer;
 		background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.jpg); 
 		}
-
+		#navigation {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				color: #ffffff;
+				height: 35px;
+				text-align: center;
+				padding-top: 15px;
+				/* Adds shadow to the bottom of the bar */
+				-webkit-box-shadow: 0px 0px 8px 0px #000000;
+				-moz-box-shadow: 0px 0px 8px 0px #000000;
+				box-shadow: 0px 0px 8px 0px #000000;
+				/* Adds the transparent background */
+				background-color: rgba(1, 1, 1, 0.8);
+				color: rgba(1, 1, 1, 0.8);
+			}
+			#navigation a {
+				font-size: 14px;
+				padding-left: 15px;
+				padding-right: 15px;
+				color: white;
+				text-decoration: none;
+			}
+			#navigation a:hover {
+				color: grey;
+			} 
+			Screen Shot 2012-04-22 at 16.40.27
+			
+			#nav {
+			 min-height:66px;
+			}
+			
+			.span-logo {
+				display: inline-block;
+				position: fixed; top:1; left:0;
+				height: 118px;
+				width: 152px;
+			}
 	</style>
   
   <script type="text/javascript">
@@ -191,11 +208,19 @@ function follow(evt) {
     }
 document.onmousemove = follow;
 </script>
-
-
-
 <body>
 <center>
+<!-- Setting up the navigation bar-->
+		<div id="navigation">
+			<a href="index.html">
+				<span class="span-logo">
+					<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+				</span>
+			</a>
+			<a href="Instructions.html"> Instructions </a>
+			<a href="StoryLine.html"> Story Line </a>
+			<a href="PlayGame.html"> Play Game </a>
+		</div>	
 <div class="box">
     <h2> The Game</h2>
     </div>
