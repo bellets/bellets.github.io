@@ -344,28 +344,25 @@ document.onmousemove = follow;
 <h3>Type the Correct Code here!</h3>
 Code:<br>
 <textarea id="myTextarea" style="width: 600px; height: 250px;">
-(<html>
+
+<html>
 <body>
 
-<h1>JavaScript Can Change Images</h1>
-
-<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
-
-<p>Click the light bulb to turn on/off the light.</p>
+<img id= "Bug" onclick="changeBug()" src="LightningBug.jpg" width="100" height="180">
 
 <script>
-function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("bulbon")) {
-        image.src = "pic_bulboff.gif";
+function changeBug() 
+    var image = document.getElementById('Bug');
+    if (image.src.match("Light")) {
+        image.src = "LightOff.jpg";
     } else {
-        image.src = "pic_bulbon.gif";
+        image.src = "LightOn.jpg";
     }
-}
+
 </script>
 
 </body>
-</html>)
+<html>
 </textarea>
 <!-- Adding user input functionality to the right of the split screen -->
 <p>Click the button to get the content of the text area.</p>
