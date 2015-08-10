@@ -246,10 +246,11 @@ document.onmousemove = follow;
   <body>
   <body background="http://payload386.cargocollective.com/1/17/574234/10027080/DSC_4282_1250.jpg">
   	<div id="navigation">
-		<a href="#"> Home </a>
-		<a href="#"> Story Line </a>
-		<a href="#"> Start Game </a>
-		<a href="#"> Instructions </a>
+		<a href= "index.html"> Home </a>
+		<a hreg = "About.html">About</a>
+		<a href="Story Line.html"> Story Line </a>
+		<a href="Play Game.html"> Start Game </a>
+		<a href="Instructions.html"> Instructions </a>
 	</div>	
     <div class="header">
       <div class="container">
@@ -344,25 +345,28 @@ document.onmousemove = follow;
 <h3>Type the Correct Code here!</h3>
 Code:<br>
 <textarea id="myTextarea" style="width: 600px; height: 250px;">
-
-<html>
+(<html>
 <body>
 
-<img id= "Bug" onclick="changeBug()" src="LightningBug.jpg" width="100" height="180">
+<h1>JavaScript Can Change Images</h1>
+
+<img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+
+<p>Click the light bulb to turn on/off the light.</p>
 
 <script>
-function changeBug() 
-    var image = document.getElementById('Bug');
-    if (image.src.match("Light")) {
-        image.src = "LightOff.jpg";
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("bulbon")) {
+        image.src = "pic_bulboff.gif";
     } else {
-        image.src = "LightOn.jpg";
+        image.src = "pic_bulbon.gif";
     }
-
+}
 </script>
 
 </body>
-<html>
+</html>)
 </textarea>
 <!-- Adding user input functionality to the right of the split screen -->
 <p>Click the button to get the content of the text area.</p>
