@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>DeBUGg'd | Debugging Made Fun</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+<title>DeBUGg'd | Debugging Made Fun</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<meta name="description" content="">
 <link rel="shortcut icon"href="https://openclipart.org/image/800px/svg_to_png/14520/nicubunu-Ladybug.png" />
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
 <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,141 @@ body {
 background-image: url("http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg");
 font-family: Arial;
 color: black;
+}
+.container {
+width: 960px;
+}
+.header {
+border-bottom: 1px solid #ddd;
+font-family: 'Oswald', sans-serif;
+font-weight: 300;
+font-size: 17px;
+padding: 15px;
+}
+.header .menu {
+float: right;
+list-style: none;
+margin-top: 5px;
+}
+.menu > li {
+display: inline;
+padding-left: 20px;
+padding-right: 20px;
+}
+.menu a {
+color: #883eba;
+}
+.dropdown-menu {
+font-size: 16px;
+margin-top: 5px;
+min-width: 105px;
+}
+.dropdown-menu li a {
+color: #898989;
+padding: 6px 20px;
+font-weight: 300;
+}
+.slider {
+position: relative;
+width: 100%;
+height: 470px;
+border-bottom: 1px solid #ddd;
+}
+.slide {
+background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+background-size: cover;
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.active-slide {
+display: block;
+}
+.slide-copy h1 {
+color: #363636;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 40px;
+margin-top: 105px;
+margin-bottom: 0px;
+}
+.slide-copy h2 {
+color: #b7b7b7;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 40px;
+margin: 5px;
+}
+.slide-copy p {
+color: #959595;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 1.15em;
+line-height: 1.75em;
+margin-bottom: 15px;
+margin-top: 16px;
+}
+.slide-img {
+text-align: right;
+}
+/* Slide feature */
+.slide-feature {
+text-align: center;
+background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+height: 470px;
+}
+.slide-feature img {
+margin-top: 112px;
+margin-bottom: 28px;
+}
+.slide-feature a {
+display: block;
+color: black;
+font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 20px;
+.get-app {
+list-style: none;
+padding-bottom: 30px;
+padding-left: 30px;
+padding-top: 30px;
+}
+.get-app li {
+float: left;
+margin-bottom: 5px;
+margin-right: 5px;
+}
+#navigation a {
+font-size: 14px;
+padding-left: 15px;
+padding-right: 15px;
+color: black;
+text-decoration: none;
+}
+#navigation a:hover {
+color: purple;
+}
+Screen Shot 2012-04-22 at 16.40.27
+#nav {
+min-height:66px;
+}
+.span-logo {
+display: inline-block;
+position: fixed; top:1; left:0;
+height: 118px;
+width: 152px;
+}
+h1 {
+font-family: 'Indie Flower', serif;
+color: black;
+}
+h3 {
+font-family: 'Architects Daughter', italic;
+color: black;
+}
 html, body {
 margin: 0;
 padding: 0;
@@ -151,49 +286,34 @@ color:white;
 text-align:center;
 padding:5px;
 }
-#Drawing {
-background-color:#333366;
-height:550px;
-width:650px;
-float:left;
-padding:10px;
+#navigation {
+position: fixed;
+top: 0;
+width: 100%;
+color: #ffffff;
+height: 35px;
+text-align: center;
+padding-top: 15px;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+/* Adds the transparent background */
+background-color: rgba(1, 1, 1, 0.8);
+color: rgba(1, 1, 1, 0.8);
 }
-#Script {
-background-color:#1B1B1B;
-height:550px;
-width:650px;
-float:left;
-padding:10px;
+#navigation a {
+font-size: 14px;
+padding-left: 15px;
+padding-right: 15px;
+color: white;
+text-decoration: none;
 }
-#footer {
-background-color:black;
-color:white;
-clear:both;
-text-align:center;
-padding:5px;
+#navigation a:hover {
+color: grey;
 }
-.tooltip-wrap {
-position: relative;
-}
-.tooltip-wrap .tooltip-content {
-display: none;
-position: absolute;
-bottom: 5%;
-left: 5%;
-right: 5%;
-background-color: #eeeeee;
-padding: .5em;
-}
-.tooltip-wrap:hover .tooltip-content {
-display: block;
-}
-#divtoshow {position:absolute;display:none;color:white;}
-#onme {width:600px;height:400px;background-color:white;cursor:pointer;
-background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.jpg);
-}n Shot 2012-04-22 at 16.40.27
-
+Screen Shot 2012-04-22 at 16.40.27
 </style>
-
 </head>
 <body>
 <div class="header">
@@ -222,7 +342,6 @@ background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.
 </center>
 </div>
 </div>
-
 <center>
 <div class="footer">
 <div class="container">
@@ -252,7 +371,6 @@ This Is where the Story line goes
 This Is where the Story line goes
 </p>
 </center>
-
 <center>
 <div id="footer">
 &copy; Property of Girls Who Code Students Belviane, Claire, Julianne and Samantha
