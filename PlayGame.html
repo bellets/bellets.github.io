@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>DeBUGg'd | Debugging Made Fun</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-   
-   <link rel="shortcut icon"href="https://openclipart.org/image/800px/svg_to_png/14520/nicubunu-Ladybug.png" />
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">		
-	<link rel="stylesheet" href="css/templatemo-style.css">
-	<style>
-	h1 {
+<html>
+	<head>
+		<style>
+			body {
+				background-image: url("http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg");
+				font-family: Arial;
+				color: white; 
+			}
+			h1 {
 				font-size: 400%;
 			}
 			p{
@@ -34,7 +25,7 @@
 				width: 600px;
 				height: 250px;
 			}
-			/*Design for first button*/
+			
 			.but1 {
 				background: #FF5DB1;
 				background: -moz-linear-gradient(top,#80E380 0%,#009933 100%);
@@ -54,7 +45,7 @@
 				border:1px solid #193C25
 			
 			}
-				/*Design for second button*/
+			
 			.but2 {
 				background: #FF5DB1;
 				background: -moz-linear-gradient(top,#CC6699 0%,#993399 100%);
@@ -77,12 +68,6 @@
 			
 			.clearfix {
 				clear: both;
-			}
-			#divtoshow {
-				position:absolute;
-				display:none;
-				color:white;
-				
 			}
 			
 			.footer {
@@ -107,21 +92,19 @@
 					width: 100%;
 					}
 			}
-				/*Heading content*/
+			
 			h1 {
 				text-align: center;
 					color: #fff;
 				 font-family: 'Indie Flower', serif;
 					color:white;
 			}
-				/*Text content*/
+				
 			p { 
 				text-align: center;
 				color:white;
 				font-size: 20px;
 			}
-			
-		
 				
 			h3 {
 				font-family: 'Architects Daughter', italic;
@@ -142,9 +125,95 @@
 					text-align:center;
 					padding:5px;
 			}
-	</style>
-	<!--Function for bug-->
-	<script type="text/javascript">
+			#Drawing {
+				background-color:#333366;
+				height:550px;
+				width:668.5px;
+				float:left;
+				padding:0px; 
+			}
+			
+			#Script {
+				background-color:#1B1B1B;
+				height:550px;
+				width:668.5px;
+				float:right;
+				padding:0px; 
+			}	
+			
+			#footer {
+				background-color:black;
+				color:white;
+				clear:both;
+				text-align:center;
+				padding:5px; 
+			}
+			
+			.tooltip-wrap {
+				position: relative;
+			}
+			
+			.tooltip-wrap .tooltip-content {
+				display: none;
+				position: absolute;
+				bottom: 5%;
+				left: 5%;
+				right: 5%;
+				background-color: #eeeeee;
+				padding: .5em;
+				}
+				
+			.tooltip-wrap:hover .tooltip-content {
+				display: block;
+			}
+				
+			#divtoshow {position:absolute;display:none;color:white;}
+			#onme {
+				width:600px;height:400px;background-color:white;cursor:pointer;
+				background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.jpg); 
+			}
+#navigation {
+-				position: fixed;
+-				top: 0;
+-				width: 100%;
+-				color: #ffffff;
+-				height: 35px;
+-				text-align: center;
+-				padding-top: 15px;
+-				/* Adds shadow to the bottom of the bar */
+-				-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-				-moz-box-shadow: 0px 0px 8px 0px #000000;
+-				box-shadow: 0px 0px 8px 0px #000000;
+-				/* Adds the transparent background */
+-				background-color: rgba(1, 1, 1, 0.8);
+-				color: rgba(1, 1, 1, 0.8);
+-			}
+-			#navigation a {
+-				font-size: 14px;
+-				padding-left: 15px;
+-				padding-right: 15px;
+-				color: white;
+-				text-decoration: none;
+-			}
+-			#navigation a:hover {
+-				color: grey;
+-			} 
+-			Screen Shot 2012-04-22 at 16.40.27
+-			
+-			#nav {
+-			 min-height:66px;
+-			}
+-			
+-			.span-logo {
+-				display: inline-block;
+-				position: fixed; top:1; left:0;
+-				height: 118px;
+-				width: 152px;
+-			}
+-	
+		</style>
+	  
+		<script type="text/javascript">
 			var divName = 'divtoshow'; // div that is to follow the mouse (must be position:absolute)
 			var offX = 15;          // X offset from mouse position
 			var offY = 15;          // Y offset from mouse position
@@ -155,78 +224,32 @@
 				obj.left = (parseInt(mouseX(evt))+offX) + 'px';
 				obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
 				}
-			document.onmouseMove = follow;
+			document.onmousemove = follow;
 		</script>
-	
-</head>
-	<!--Mostly design stuff-->
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
-	<div class="preloader">
-		<div class="sk-spinner sk-spinner-rotating-plane"></div>
-	</div>
-	<nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-				</button>
-				<a href="index.html" class="navbar-brand">
-				<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
-				</a>
-				
+	</head>
+	<body>
+		<center>
+			<!-- Setting up the navigation bar-->
+-		<div id="navigation">
+-			<a href="index.html">
+-				<span class="span-logo">
+-					<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+-				</span>
+-			</a>
+-			<a href="Instructions.html"> Instructions </a>
+-			<a href="StoryLine.html"> Story Line </a>
+-			<a href="PlayGame.html"> Play Game </a>
+-		</div>	
+			<div class="box">
+				<h2> The Game</h2>
 			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Instructions.html" class="smoothScroll">Instructions</a></li>
-					<li><a href="StoryLine.html" class="smoothScroll">Storyline</a></li>
-					<li><a href="PlayGame.html" class=">smoothScroll">Play Game</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- start home -->
-	<section id="home">
-		<div class="overlay">
-			<div class="flexslider">
-				<ul class="slides">
-					<li>
-						<img src="http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg" alt="Slide 1">
-						<div class="slider-caption">
-							<div class="templatemo_homewrapper">
-								<h2 class="wow bounceIn">Let's Play!</h2>
-								<h3 class="wow bounce">DeBUGg'd | Debugging Made Fun</h3>
-								<h3>
-									<span class="wow fadeIn" data-wow-delay="0.3s">Made by Girls Who Code Students:</span>
-									<span class="wow fadeIn" data-wow-delay="0.6s">Belviane,</span>
-									<span class="wow fadeIn" data-wow-delay="0.9s">Claire,</span>
-									<span class="wow fadeIn" data-wow-delay="0.3s">Julianne,</span>
-									<span class="wow fadeIn" data-wow-delay="0.6s"> and </span>
-									<span class="wow fadeIn" data-wow-delay="0.9s">Samantha</span>
-								</h3>
-								<a href="#game" class="smoothScroll templatemo-slider-btn btn btn-default">The Game</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- end home -->
-	<!-- start game -->
-	<section id="game">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 wow bounceIn">
-					<h2>Level One</h2>
-					<hr>
-				</div>
-			</div>
-			<div class="row">
-				<!-- Adding an image to the left of the split screen -->
-				<center>
+			<div class="footer">
+				<div class="container">
 			
+				</div>
+				
+				<!-- Adding an image to the left of the split screen -->
+				<div id="Drawing">
 					<p>Let's help the firefly light up the dark!</p>	
 					<div id="divtoshow">
 						<img id="firefly" src="https://36.media.tumblr.com/fcaa2c71476a0d9399ace2db92af7405/tumblr_nsod33IQrk1rzxjy3o1_540.png" height = '100px' width = '100px'>
@@ -234,15 +257,15 @@
 		
 					<br><br>
 		
-					<div id='onme' onMouseup='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="center"'>
-						Click <b> this </b> to release me from the back of the screen
+					<div id='onme' onMouseover='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="none"'>
+						Mouse over this
 					</div>
 				</div>
 				
-				<center><div id="Script">
+				<div id="Script">
 					<h3>Fix the Code here!</h3>
 					Code:<br>
-<textarea id="myTextarea">
+<textarea id="myTextarea"> 
 <html>
 <body>
 	<img id="Bug" onclick="changeBug()" src="Firefly" width="100" height="180">
@@ -265,11 +288,11 @@
 					<center>
 						<button type="button" class = "but1" onclick = "changeImage()">Debug!</button>
 						<button class ="but2" onclick="myFunction1()">?</button>
-					
+					</center>
 
 					<script>
 						function myFunction1() {
-							alert("Hint coming soon!");
+							alert("Watch out for punctuation marks!");
 						}
 						function myFunction() {
 							var x = document.getElementById("myTextarea").value;
@@ -286,34 +309,9 @@
 								image.src = "https://lh3.googleusercontent.com/-on5LJrTOtWY/Vci0AzdrRxI/AAAAAAAADd8/Jq9Zn2OYWzc/w426-h574/firefly_light%2B%25281%2529.png";
 							}
 						}
-					</center></script>
+					</script>
 				</div> <!-- closing script division-->
-			</div>
-		</div>
-	</section>
-	<!-- end game-->
-	</center>
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="social-icon wow fadeIn" data-wow-delay="0.3s">
-						<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
-					</ul>
-					<p class="wow bounceIn">&copy; DeBUG'd 2015</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-		<!--Sources-->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/imagesloaded.min.js"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/custom.js"></script>
-</body>
+			</div> <!-- closing footer-->
+		</center>
+	</body>
 </html>
