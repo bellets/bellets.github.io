@@ -1,128 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>DeBUGg'd | Debugging Made Fun</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-   
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">		
-	<link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="shortcut icon"href="https://openclipart.org/image/800px/svg_to_png/14520/nicubunu-Ladybug.png" />
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
+<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+.container {
+width: 960px;
+}
+.header {
+background-color: rgba(255, 255, 255, 0.95);
+border-bottom: 1px solid #ddd;
+font-family: 'Oswald', sans-serif;
+font-weight: 300;
+font-size: 17px;
+padding: 15px;
+}
+.header .menu {
+float: right;
+list-style: none;
+margin-top: 5px;
+}
+.menu > li {
+display: inline;
+padding-left: 20px;
+padding-right: 20px;
+}
+.menu a {
+color: #883eba;
+}
+.dropdown-menu {
+font-size: 16px;
+margin-top: 5px;
+min-width: 105px;
+}
+.dropdown-menu li a {
+color: #898989;
+padding: 6px 20px;
+font-weight: 300;
+}
+.slider {
+position: relative;
+width: 100%;
+height: 470px;
+border-bottom: 1px solid #ddd;
+}
+.slide {
+background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+background-size: cover;
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+.active-slide {
+display: block;
+}
+.slide-copy h1 {
+color: #363636;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 40px;
+margin-top: 105px;
+margin-bottom: 0px;
+}
+.slide-copy h2 {
+color: #b7b7b7;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 40px;
+margin: 5px;
+}
+.slide-copy p {
+color: #959595;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 1.15em;
+line-height: 1.75em;
+margin-bottom: 15px;
+margin-top: 16px;
+}
+.slide-img {
+text-align: right;
+}
+/* Slide feature */
+.slide-feature {
+text-align: center;
+background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+height: 470px;
+}
+.slide-feature img {
+margin-top: 112px;
+margin-bottom: 28px;
+}
+.slide-feature a {
+display: block;
+color: #6fc5e0;
+font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
+font-family: 'Oswald', sans-serif;
+font-weight: 400;
+font-size: 20px;
+.get-app {
+list-style: none;
+padding-bottom: 30px;
+padding-left: 30px;
+padding-top: 30px;
+}
+.get-app li {
+float: left;
+margin-bottom: 5px;
+margin-right: 5px;
+}
+#navigation a {
+font-size: 14px;
+padding-left: 15px;
+padding-right: 15px;
+color: white;
+text-decoration: none;
+}
+#navigation a:hover {
+color: grey;
+}
+Screen Shot 2012-04-22 at 16.40.27
+#nav {
+min-height:66px;
+}
+.span-logo {
+display: inline-block;
+position: fixed; top:1; left:0;
+height: 118px;
+width: 152px;
+}
+</style>
+<script type="text/javascript">
+(function(){function C(){e.globalCompositeOperation="source-over";e.fillStyle="rgba(8,8,12,0.65)";e.fillRect(0,0,f,p);e.globalCompositeOperation="lighter";x=q-u;y=r-v;u=q;v=r;for(var d=0.86*f,l=0.125*f,m=0.5*f,t=Math.random,n=Math.abs,o=z;o--;){var h=A[o],i=h.x,j=h.y,a=h.a,b=h.b,c=i-q,k=j-r,g=Math.sqrt(c*c+k*k)||0.001,c=c/g,k=k/g;if(w&&g<m)var s=14*(1-g/m),a=a+(c*s+0.5-t()),b=b+(k*s+0.5-t());g<d&&(s=0.0014*(1-g/d)*f,a-=c*s,b-=k*s);g<l&&(c=2.6E-4*(1-g/l)*f,a+=x*c,b+=y*c);a*=B;b*=B;c=n(a);k=n(b);g=
+0.5*(c+k);0.1>c&&(a*=3*t());0.1>k&&(b*=3*t());c=0.45*g;c=Math.max(Math.min(c,3.5),0.4);i+=a;j+=b;i>f?(i=f,a*=-1):0>i&&(i=0,a*=-1);j>p?(j=p,b*=-1):0>j&&(j=0,b*=-1);h.a=a;h.b=b;h.x=i;h.y=j;e.fillStyle=h.color;e.beginPath();e.arc(i,j,c,0,D,!0);e.closePath();e.fill()}}function E(d){d=d?d:window.event;q=d.clientX-m.offsetLeft-n.offsetLeft;r=d.clientY-m.offsetTop-n.offsetTop}function F(){w=!0;return!1}function G(){return w=!1}function H(){this.color="rgb("+Math.floor(255*Math.random())+","+Math.floor(255*
+Math.random())+","+Math.floor(255*Math.random())+")";this.b=this.a=this.x=this.y=0;this.size=1}var D=2*Math.PI,f=1E3,p=560,z=600,B=0.96,A=[],o,e,n,m,q,r,x,y,u,v,w;window.onload=function(){o=document.getElementById("mainCanvas");if(o.getContext){m=document.getElementById("outer");n=document.getElementById("canvasContainer");e=o.getContext("2d");for(var d=z;d--;){var l=new H;l.x=0.5*f;l.y=0.5*p;l.a=34*Math.cos(d)*Math.random();l.b=34*Math.sin(d)*Math.random();A[d]=l}q=u=0.5*f;r=v=0.5*p;document.onmousedown=
+F;document.onmouseup=G;document.onmousemove=E;setInterval(C,33);document.getElementById("output").innerHTML=''}else document.getElementById("output").innerHTML="Sorry, needs a recent version of Chrome, Firefox, Opera, Safari, or Internet Explorer 9."}})();
+</script>
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
-	<div class="preloader">
-		<div class="sk-spinner sk-spinner-rotating-plane"></div>
-	</div>
-	<nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-					<span class="icon icon-bar"></span>
-				</button>
-				<a href="index.html" class="navbar-brand">
-				<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
-				</a>
-				
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Instructions.html" class="smoothScroll">Instructions</a></li>
-					<li><a href="StoryLine.html" class="smoothScroll">Story Line</a></li>
-					<li><a href="PlayGame.html" class=">smoothScroll">Play Game</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- start home -->
-	<section id="home">
-		<div class="overlay">
-			<div class="flexslider">
-				<ul class="slides">
-					<li>
-						<img src="http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg" alt="Slide 1">
-						<div class="slider-caption">
-							<div class="templatemo_homewrapper">
-								<h2 class="wow bounceIn">Come Delve into Debugging!</h2>
-								<h3 class="wow bounce">DeBUGg'd | Debugging Made Fun</h3>
-								<h3>
-									<span class="wow fadeIn" data-wow-delay="0.3s">Made by Girls Who Code Students:</span>
-									<span class="wow fadeIn" data-wow-delay="0.6s">Belviane,</span>
-									<span class="wow fadeIn" data-wow-delay="0.9s">Claire,</span>
-									<span class="wow fadeIn" data-wow-delay="0.3s">Julianne,</span>
-									<span class="wow fadeIn" data-wow-delay="0.6s"> and </span>
-									<span class="wow fadeIn" data-wow-delay="0.9s">Samantha</span>
-								</h3>
-								<a href="#about" class="smoothScroll templatemo-slider-btn btn btn-default">What is debugging?</a>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<!-- end home -->
-	<!-- start about debugging -->
-	<section id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 wow bounceIn">
-					<h2>What is debugging?</h2>
-					<hr>
-					<h4>a little about an important component of coding...</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 col-sm-6 wow fadeInLeft templatemo-about-left" data-wow-delay="0.3s">
-					<h3 class="about-title">Studio History</h3>
-					<p>Phasellus tempus malesuada congue. Sed id est tincidunt, iaculis nulla vel, sodales metus. Morbi interdum accumsan augue, in accumsan neque lacinia sed. Fusce cursus eu ligula ut gravida. Ut tristique hendrerit bibendum. Suspendisse euismod sit amet quam et luctus.</p>
-                    <p>Nulla viverra diam sed justo vehicula, non venenatis massa gravida. Nunc efficitur et quam non tempor. Nullam nec nisl eget est ultrices elementum nec vel nisl. Cras vestibulum nisl vel justo tempor, ut lacinia est accumsan.</p>
-				</div>
-				<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
-					<span class="text-uppercase">BOOTSTRAP 100%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-					</div>
-					<span class="text-uppercase">HTML5 &AMP; CSS3 90%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-					</div>
-					<span class="text-uppercase">Wordpress 65%</span>
-					<div class="progress">
-						<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- end about debugging -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="social-icon wow fadeIn" data-wow-delay="0.3s">
-						<li><a href="#" class="fa fa-facebook"></a></li>
-						<li><a href="#" class="fa fa-twitter"></a></li>
-						<li><a href="#" class="fa fa-instagram"></a></li>
-					</ul>
-					<p class="wow bounceIn">&copy; <span>Property of </span>Girls Who Code Students: <span>Belviane, Claire, Julianne, and Samantha</span></p>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/imagesloaded.min.js"></script>
-	<script src="js/smoothscroll.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/custom.js"></script>
+<body>
+<div class="header">
+<div class="container">
+<div class="logo-icon">
+<center>
+<!-- Setting up the navigation bar-->
+<div id="navigation">
+<a href="index.html">
+<span class="span-logo">
+<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+</span>
+</a>
+<a href="Instructions.html"> Instructions </a>
+<a href="StoryLine.html"> Story Line </a>
+<a href="PlayGame.html"> Play Game </a>
+</div>
+</center>
+</div>
+<div class="slider">
+<!-- Sets up the logo and description of the game -->
+<div class="slide active-slide">
+<div class="container">
+<div class="row">
+<div class="slide-copy col-xs-5">
+<h1><img src = "https://41.media.tumblr.com/5a367d57e22374e25e4e528e009462f3/tumblr_nsmipj3rAW1sw58b4o1_400.png" ></h1>
+<p>A game designed to make coding more approachable. 12+. Bugs are invited. Brought to you by Girls Who Code.</p>
+<ul class="get-app">
+<li><a href="http://girlswhocode.com/"><img src="http://www.likeabossgirls.com/wp-content/uploads/2015/06/girlswhocodegwc-logo.png" height = '80px' width = '140px'></a></li>
+<li><a href="https://twitter.com/girlswhocode"><img src="http://www.thenewsin.com/wp-content/uploads/2015/07/Twitter-logo.png" height = '80px' width = '80px'></a></li>
+<li><a href="https://www.facebook.com/GirlsWhoCode"><img src="http://www.freelargeimages.com/wp-content/uploads/2014/11/Facebook_logo-2.png" height = '80px' width = '80px'></a></li>
+</ul>
+</div>
+<!-- Interactive image and calculator -->
+<div class="slide-img col-xs-7">
+<p> Click on the options below to witness how cool code is! </p>
+<div id="outer">
+<div id="canvasContainer">
+<canvas id="mainCanvas" width = '200px' height = '100px'></canvas>
+<div id="output"></div>
+</div>
 </body>
 </html>
