@@ -131,18 +131,11 @@
 					text-align:center;
 					padding:5px;
 			}
-			#Drawing {
-				background-color:#333366;
-				height:550px;
-				width:668.5px;
-				float:left;
-				padding:0px; 
-			}
 			
 			#Script {
 				background-color:#1B1B1B;
-				height:550px;
-				width:668.5px;
+				height:700px;
+				width:700px;
 				float:right;
 				padding:0px; 
 			}	
@@ -174,10 +167,7 @@
 			}
 				
 			#divtoshow {position:absolute;display:none;color:white;}
-			#onme {
-				width:600px;height:400px;background-color:white;cursor:pointer;
-				background-image: url(http://petapixel.com/assets/uploads/2012/01/firefly5_mini.jpg); 
-			}
+			
 #navigation {
 -				position: fixed;
 -				top: 0;
@@ -231,7 +221,7 @@
 				obj.left = (parseInt(mouseX(evt))+offX) + 'px';
 				obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
 				}
-			document.onmousemove = follow;
+			document.onmouseMove = follow;
 		</script>
 	</head>
 	<body>
@@ -264,7 +254,7 @@
 		
 					<br><br>
 		
-					<div id='onme' onmousemove='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="center"'>
+					<div id='onme' onMouseup='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="center"'>
 						Mouse over this
 					</div>
 				</div>
@@ -300,7 +290,7 @@
 					<script>
 
 						function myFunction1() {
-							alert("Don't forget parenthesis, brackets, and semicolons are extremely important!!!");
+							alert("Hint coming soon!");
 						}
 						function myFunction() {
 							var x = document.getElementById("myTextarea").value;
