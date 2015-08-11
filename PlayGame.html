@@ -231,7 +231,7 @@
 				obj.left = (parseInt(mouseX(evt))+offX) + 'px';
 				obj.top = (parseInt(mouseY(evt))+offY) + 'px'; 
 				}
-			document.onmouseMove = follow;
+			document.onmousemove = follow;
 		</script>
 	</head>
 	<body>
@@ -264,7 +264,7 @@
 		
 					<br><br>
 		
-					<div id='onme' onMouseup='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="center"'>
+					<div id='onme' onmousemove='document.getElementById(divName).style.display="block"' onMouseout='document.getElementById(divName).style.display="center"'>
 						Mouse over this
 					</div>
 				</div>
