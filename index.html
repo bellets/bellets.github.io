@@ -1,380 +1,116 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>DeBUGg'd | Debugging Made Fun</title>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<link rel="shortcut icon"href="https://openclipart.org/image/800px/svg_to_png/14520/nicubunu-Ladybug.png" />
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet'>
-<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-<link rel='stylesheet' href='style.css'/>
-<style>
-body {
-background-image: url("http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg");
-font-family: Arial;
-color: black;
-}
-.container {
-width: 960px;
-}
-.header {
-border-bottom: 1px solid #ddd;
-font-family: 'Oswald', sans-serif;
-font-weight: 300;
-font-size: 17px;
-padding: 15px;
-}
-.header .menu {
-float: right;
-list-style: none;
-margin-top: 5px;
-}
-.menu > li {
-display: inline;
-padding-left: 20px;
-padding-right: 20px;
-}
-.menu a {
-color: #883eba;
-}
-.dropdown-menu {
-font-size: 16px;
-margin-top: 5px;
-min-width: 105px;
-}
-.dropdown-menu li a {
-color: #898989;
-padding: 6px 20px;
-font-weight: 300;
-}
-.slider {
-position: relative;
-width: 100%;
-height: 470px;
-border-bottom: 1px solid #ddd;
-}
-.slide {
-background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
-background-size: cover;
-display: none;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
-.active-slide {
-display: block;
-}
-.slide-copy h1 {
-color: #363636;
-font-family: 'Oswald', sans-serif;
-font-weight: 400;
-font-size: 40px;
-margin-top: 105px;
-margin-bottom: 0px;
-}
-.slide-copy h2 {
-color: #b7b7b7;
-font-family: 'Oswald', sans-serif;
-font-weight: 400;
-font-size: 40px;
-margin: 5px;
-}
-.slide-copy p {
-color: #959595;
-font-family: Georgia, "Times New Roman", serif;
-font-size: 1.15em;
-line-height: 1.75em;
-margin-bottom: 15px;
-margin-top: 16px;
-}
-.slide-img {
-text-align: right;
-}
-/* Slide feature */
-.slide-feature {
-text-align: center;
-background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
-height: 470px;
-}
-.slide-feature img {
-margin-top: 112px;
-margin-bottom: 28px;
-}
-.slide-feature a {
-display: block;
-color: black;
-font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
-font-family: 'Oswald', sans-serif;
-font-weight: 400;
-font-size: 20px;
-.get-app {
-list-style: none;
-padding-bottom: 30px;
-padding-left: 30px;
-padding-top: 30px;
-}
-.get-app li {
-float: left;
-margin-bottom: 5px;
-margin-right: 5px;
-}
-#navigation a {
-font-size: 14px;
-padding-left: 15px;
-padding-right: 15px;
-color: black;
-text-decoration: none;
-}
-#navigation a:hover {
-color: purple;
-}
-Screen Shot 2012-04-22 at 16.40.27
-#nav {
-min-height:66px;
-}
-.span-logo {
-display: inline-block;
-position: fixed; top:1; left:0;
-height: 118px;
-width: 152px;
-}
-h1 {
-font-family: 'Indie Flower', serif;
-color: black;
-}
-h3 {
-font-family: 'Architects Daughter', italic;
-color: black;
-}
-html, body {
-margin: 0;
-padding: 0;
-}
-.container {
-max-width: 940px;
-margin: 0 auto;
-padding: 0 10px;
-}
-.jumbotron {
-height: 800px;
-}
-.nav {
-margin: 0;
-padding: 20px 0;
-}
-.nav li {
-color: #fff;
-font-family: 'Raleway', sans-serif;
-font-weight: 600;
-font-size: 12px;
-}
-.main {
-position: relative;
-top: 180px;
-text-align: center;
-}
-.btn-main {
-background-color: #333;
-color: #fff;
-font-family: 'Raleway', sans-serif;
-font-weight: 600;
-font-size: 18px;
-letter-spacing: 1.3px;
-padding: 16px 40px;
-text-decoration: none;
-text-transform: uppercase;
-}
-.supporting {
-padding-top: 80px;
-padding-bottom: 100px;
-}
-.supporting .col {
-float: left;
-width: 33%;
-font-family: 'Raleway', sans-serif;
-text-align: center;
-}
-.supporting img {
-height: 32px;
-}
-.supporting h2 {
-font-weight: 600;
-font-size: 23px;
-text-transform: uppercase;
-}
-.supporting p {
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-padding: 0 50px;
-margin-bottom: 40px;
-}
-.clearfix {
-clear: both;
-}
-.footer {
-background-color: #333;
-color: #fff;
-padding: 30px 0;
-}
-.footer p {
-font-family: 'Raleway', sans-serif;
-text-transform: uppercase;
-font-size: 11px;
-}
-@media (max-width: 500px) {
-.main h1 {
-font-size: 50px;
-padding: 0 40px;
-}
-.supporting .col {
-width: 100%;
-}
-}
-#submit {
-background-color: #ccc;
--moz-border-radius: 500px;
--webkit-border-radius: 500px;
-border-radius:600px;
-color: #fff;
-font-family: 'Oswald';
-font-size: 50px;
-text-decoration: none;
-cursor: pointer;
-border:none;
-}
-#submit:hover {
-border: none;
-background: #298B31;
-box-shadow: 0px 0px 1px #777;
-}
-h1 {
-text-align: center;
-}
-h1 {
-font-family: 'Indie Flower', serif;
-}
-p {
-text-align: center;
-}
-h3 {
-font-family: 'Architects Daughter', italic;
-}
-body {
-color: Black;
-}
-h1 {
-color: #fff;
-}
-p.ex {
-color: rgb(0,0,0);
-}
-p {
-font-size: 20px;
-}
-#header {
-background-color:black;
-color:white;
-text-align:center;
-padding:5px;
-}
-#navigation {
-position: fixed;
-top: 0;
-width: 100%;
-color: #ffffff;
-height: 35px;
-text-align: center;
-padding-top: 15px;
-/* Adds shadow to the bottom of the bar */
--webkit-box-shadow: 0px 0px 8px 0px #000000;
--moz-box-shadow: 0px 0px 8px 0px #000000;
-box-shadow: 0px 0px 8px 0px #000000;
-/* Adds the transparent background */
-background-color: rgba(1, 1, 1, 0.8);
-color: rgba(1, 1, 1, 0.8);
-}
-#navigation a {
-font-size: 14px;
-padding-left: 15px;
-padding-right: 15px;
-color: white;
-text-decoration: none;
-}
-#navigation a:hover {
-color: grey;
-}
-Screen Shot 2012-04-22 at 16.40.27
-</style>
+	<meta charset="utf-8">
+	<title>DeBUGg'd | Debugging Made Fun</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+   
+   <link rel="shortcut icon"href="https://openclipart.org/image/800px/svg_to_png/14520/nicubunu-Ladybug.png" />
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">		
+	<link rel="stylesheet" href="css/templatemo-style.css">
 </head>
-<body>
-<div class="header">
-<div class="container">
-<div class="logo-icon">
-<center>
-<!-- Setting up the navigation bar-->
-<div id="navigation">
-<a href="index.html">
-<span class="span-logo">
-<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
-</span>
-</a>
-<a href="Instructions.html"> Instructions </a>
-<a href="StoryLine.html"> Story Line </a>
-<a href="PlayGame.html"> Play Game </a>
-</div>
-</center>
-</div>
-<div class="slider">
-<center>
-<h3>Come Delve Into Debugging with</h3>
-<h1>DeBUGg'd</h1>
-<h3>Brought to you by Girls Who Code students: Samantha, Belviane, Claire and Julianne</h3>
-<button name="submit" id="submit"><a href="#A"> What is Debugging?</a></button>
-</center>
-</div>
-</div>
-<center>
-<div class="footer">
-<div class="container">
-<a name="A"></a>
-<h1>What is Debugging?</h1>
-</div>
-</div>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-<p>
-This Is where the Story line goes
-</p>
-</center>
-<center>
-<div id="footer">
-&copy; Property of Girls Who Code Students Samantha, Belviane, Claire and Julianne
-</div>
-</center>
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+	<div class="preloader">
+		<div class="sk-spinner sk-spinner-rotating-plane"></div>
+	</div>
+	<nav class="navbar navbar-fixed-top custom-navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+					<span class="icon icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">
+				<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+				</a>
+				
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="Instructions.html" class="smoothScroll">Instructions</a></li>
+					<li><a href="StoryLine.html" class="smoothScroll">Story Line</a></li>
+					<li><a href="PlayGame.html" class=">smoothScroll">Play Game</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- start home -->
+	<section id="home">
+		<div class="overlay">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="http://images6.fanpop.com/image/photos/34800000/Nature-Wallpaper-daydreaming-34811100-1024-768.jpg" alt="Slide 1">
+						<div class="slider-caption">
+							<div class="templatemo_homewrapper">
+								<h2 class="wow bounceIn">Come Delve into Debugging!</h2>
+								<h3 class="wow bounce">DeBUGg'd | Debugging Made Fun</h3>
+								<h3>
+									<span class="wow fadeIn" data-wow-delay="0.3s">Made by Girls Who Code Students:</span>
+									<span class="wow fadeIn" data-wow-delay="0.6s">Belviane,</span>
+									<span class="wow fadeIn" data-wow-delay="0.9s">Claire,</span>
+									<span class="wow fadeIn" data-wow-delay="0.3s">Julianne,</span>
+									<span class="wow fadeIn" data-wow-delay="0.6s"> and </span>
+									<span class="wow fadeIn" data-wow-delay="0.9s">Samantha</span>
+								</h3>
+								<a href="#about" class="smoothScroll templatemo-slider-btn btn btn-default">What is debugging?</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end home -->
+	<!-- start about debugging -->
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 wow bounceIn">
+					<h2>What is debugging?</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 wow fadeInLeft templatemo-about-left" data-wow-delay="0.3s">
+					<h3 class="about-title">An Important Component of Programming</h3>
+					<p>In computers, debugging is the process of locating and fixing or bypassing bugs (errors) in computer program code or the engineering of a hardware device. To debug a program or hardware device is to start with a problem, isolate the source of the problem, and then fix it. A user of a program that does not know how to fix the problem may learn enough about the problem to be able to avoid it until it is permanently fixed. When someone says they've debugged a program or "worked the bugs out" of a program, they imply that they fixed it so that the bugs no longer exist.</p>
+                    <p><i> Definition from Tech Target </i></p>
+				</div>
+				<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+					<img src= "https://cdn.tutsplus.com/net/authors/jeremymcpeak/debug-proxies-preview.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end about debugging -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="social-icon wow fadeIn" data-wow-delay="0.3s">
+						<img src="https://41.media.tumblr.com/0f179c3fcf45b49bd04d644445c24b73/tumblr_nsvoffRsnV1rzxjy3o1_540.png" height="42" width="140" />
+					</ul>
+					<p class="wow bounceIn">&copy; <span>Property of </span>Girls Who Code Students: <span>Belviane, Claire, Julianne, and Samantha</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/isotope.js"></script>
+	<script src="js/imagesloaded.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/custom.js"></script>
 </body>
 </html>
